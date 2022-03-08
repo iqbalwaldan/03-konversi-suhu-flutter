@@ -18,7 +18,7 @@ class Result extends StatelessWidget {
       children: [
         Text("Suhu dalam " + title),
         const Text(""),
-        Text('$_result', style: const TextStyle(fontSize: 20)),
+        Text(_result.toStringAsFixed(2), style: const TextStyle(fontSize: 20)),
       ],
     );
   }

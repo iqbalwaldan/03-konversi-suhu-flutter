@@ -1,5 +1,6 @@
 // Moh. Iqbal Waldan (2031710139)
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Input extends StatelessWidget {
   const Input({
@@ -15,9 +16,9 @@ class Input extends StatelessWidget {
       decoration: const InputDecoration(
         hintText: 'Masukkan Suhu Dalam Celcius',
       ),
-      // inputFormatters: [FilteringTextInputFormatter.digitsOnly],
       controller: etInput,
-      keyboardType: TextInputType.number,
+      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+      inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9.]'))],
     );
   }
 }
